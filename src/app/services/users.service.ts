@@ -5,13 +5,13 @@ import { User } from '../models/user';
 
 @Injectable()
 export class UsersService {
-  private _jsonURL = '/assets/data/test.json';
+  private _jsonURL = '/data/MOCK_DATA.json';
   data: any;
 
   constructor(private http: HttpClient) {
   }
 
   Filter(): Observable<any> {
-    return this.http.get("/assets/data/test.json");
+    return this.http.get(this._jsonURL);
   }
 }
