@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UsersService {
-  private _jsonURL = 'src/app/data/MOCK_DATA.json';
+  private _jsonURL = './data/MOCK_DATA.json';
   data: string;
 
   constructor(private http: HttpClient) {
-    this.http.get(this._jsonURL, {responseType: 'text'}).subscribe((data) => {
+    this.http.get(this._jsonURL, { responseType: 'text' }).subscribe((data) => {
       this.data = data;
     });
   }
