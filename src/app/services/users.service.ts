@@ -1,19 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable()
 export class UsersService {
-  private _jsonURL = 'https://mizrahi-test-template-nyw3mo.stackblitz.io/src/app/data/MOCK_DATA.json';
+  private _jsonURL = '/assets/data/test.json';
   data: any;
 
   constructor(private http: HttpClient) {
-    this.http.get(this._jsonURL).subscribe((data: any) => {
-      this.data = data;
-    });
   }
 
-  Filter() {
-    return this.data;
+  Filter(): Observable<any> {
+    return this.http.get("/assets/data/test.json");
   }
 }
