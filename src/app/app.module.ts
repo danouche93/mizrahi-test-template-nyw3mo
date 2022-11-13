@@ -7,6 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing';
 import { UsersListComponent } from './users-list/users-list.component';
+import { UsersService } from './services/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -14,9 +16,11 @@ import { UsersListComponent } from './users-list/users-list.component';
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   declarations: [AppComponent, UsersListComponent],
+  providers: [UsersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
