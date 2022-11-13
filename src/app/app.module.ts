@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   imports: [
@@ -12,8 +14,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    AppRoutingModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, UsersListComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
