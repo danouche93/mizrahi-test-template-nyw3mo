@@ -8,7 +8,7 @@ import { UsersService } from '../services/users.service';
 })
 export class UsersListComponent implements OnInit {
 
-  data: any;
+  data: string;
   
   constructor(private userService: UsersService) { }
 
