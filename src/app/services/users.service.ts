@@ -5,7 +5,7 @@ import { User } from '../models/user';
 
 @Injectable()
 export class UsersService {
-  private _jsonURL = '/app/data/MOCK_DATA.json';
+  private _jsonURL = '/assets/data/MOCK_DATA.json';
   data: any;
 
   constructor(private http: HttpClient) {
