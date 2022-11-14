@@ -8,11 +8,16 @@ import { User } from '../models/user';
 })
 export class FiltersComponent implements OnInit {
 
-  @Output() searchEvent = new EventEmitter<User>();
+  @Output() searchEvent = new EventEmitter<{userModel: User}>();
+  userModel: User = new User();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  searchEmit(){
+    this.searchEvent.emit({userModel: this.userModel});
   }
 
 }

@@ -1,17 +1,45 @@
 <form class="example-form">
   <mat-form-field class="field" appearance="fill">
-    <input matInput placeholder="Id">
+    <input
+      matInput
+      placeholder="Id"
+      [(ngModel)]="userModel.id"
+      [ngModelOptions]="{ standalone: true }"
+    />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
-    <input matInput placeholder="First Name">
+    <input
+      matInput
+      placeholder="First Name"
+      [(ngModel)]="userModel.first_name"
+      [ngModelOptions]="{ standalone: true }"
+    />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
-    <input matInput placeholder="Last Name">
+    <input
+      matInput
+      placeholder="Last Name"
+      [(ngModel)]="userModel.last_name"
+      [ngModelOptions]="{ standalone: true }"
+    />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
-    <input matInput placeholder="Account Number">
+    <input
+      matInput
+      placeholder="Account Id"
+      [(ngModel)]="userModel.account_id"
+      [ngModelOptions]="{ standalone: true }"
+    />
   </mat-form-field>
   <mat-form-field class="field" appearance="fill">
-    <input matInput placeholder="Email">
+    <input
+      matInput
+      placeholder="Email"
+      [(ngModel)]="userModel.email"
+      [ngModelOptions]="{ standalone: true }"
+    />
   </mat-form-field>
+  <button mat-raised-button color="primary" (click)="searchEmit()">
+    Search
+  </button>
 </form>

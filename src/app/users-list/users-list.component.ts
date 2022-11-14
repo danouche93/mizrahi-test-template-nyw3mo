@@ -14,7 +14,13 @@ export class UsersListComponent implements OnInit {
   constructor(private userService: UsersService) { }
 
   ngOnInit() {
-    this.userService.Filter().subscribe(res => {
+    this.userService.Get().subscribe(res => {
+      this.users = res;
+    })
+  }
+
+  filter(event){
+    this.userService.Filter(event.userModel).subscribe(res => {
       this.users = res;
     })
   }

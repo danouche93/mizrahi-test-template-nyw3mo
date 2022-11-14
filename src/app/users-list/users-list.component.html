@@ -1,9 +1,10 @@
-<div style="background-color:#F0F0F0">
+<div style="background-color:#F0F0F0;height:100%">
   <mat-toolbar>
     <h2>List of users</h2>
   </mat-toolbar>
-  <app-filters></app-filters>
+  <app-filters (searchEvent)="filter($event)"></app-filters>
   <div>
+    <div *ngIf="users.length == 0">No users found</div>
     <div *ngFor="let user of users">
       <div>
         <app-user-item [user]="user"></app-user-item>
