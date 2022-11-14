@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { UserItemComponent } from './user-item/user-item.component';
 import { MatCardModule } from '@angular/material/card';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     HttpClientModule
   ],
-  declarations: [AppComponent, UsersListComponent, UserItemComponent],
+  declarations: [AppComponent, UsersListComponent, UserItemComponent, FiltersComponent],
   providers: [UsersService],
   bootstrap: [AppComponent],
 })
