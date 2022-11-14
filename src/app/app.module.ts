@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatListModule,
     AppRoutingModule,
     HttpClientModule
   ],

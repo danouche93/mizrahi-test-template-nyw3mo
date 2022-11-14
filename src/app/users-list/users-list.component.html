@@ -1,3 +1,6 @@
 <mat-toolbar>
-  <h2>{{data}}</h2>
+  <h2>List of users</h2>
 </mat-toolbar>
+<mat-list>
+  <mat-list-item *ngFor="let user of users">{{user.id}}, {{user.first_name}} {{user.last_name}}, {{user.account_id}}, {{user.email}}</mat-list-item>
+</mat-list>
