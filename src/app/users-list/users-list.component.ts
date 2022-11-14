@@ -16,7 +16,6 @@ export class UsersListComponent implements OnInit {
   ngOnInit() {
     this.userService.Filter().subscribe(res => {
       this.users = res;
-      console.log(this.users);
     })
   }
 

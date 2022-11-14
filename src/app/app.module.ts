@@ -10,6 +10,7 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
+import { UserItemComponent } from './user-item/user-item.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { MatListModule } from '@angular/material/list';
     AppRoutingModule,
     HttpClientModule
   ],
-  declarations: [AppComponent, UsersListComponent],
+  declarations: [AppComponent, UsersListComponent, UserItemComponent],
   providers: [UsersService],
   bootstrap: [AppComponent],
 })
