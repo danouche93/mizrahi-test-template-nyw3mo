@@ -11,6 +11,7 @@ import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { UserItemComponent } from './user-item/user-item.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { UserItemComponent } from './user-item/user-item.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
+    MatCardModule,
     AppRoutingModule,
     HttpClientModule
   ],

@@ -3,6 +3,8 @@
 </mat-toolbar>
 <mat-list>
   <mat-list-item *ngFor="let user of users">
+    <div style="margin-bottom:15px">
     <app-user-item [user]="user"></app-user-item>
+    </div>
   </mat-list-item>
 </mat-list>
