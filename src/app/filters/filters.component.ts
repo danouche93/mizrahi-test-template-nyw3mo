@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-filters',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filters.component.css']
 })
 export class FiltersComponent implements OnInit {
+
+  @Output() searchEvent = new EventEmitter<User>();
 
   constructor() { }
 
