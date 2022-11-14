@@ -6,12 +6,18 @@ import { User } from '../models/user';
 @Injectable()
 export class UsersService {
   private _jsonURL = '/assets/data/MOCK_DATA.json';
-  data: any;
 
   constructor(private http: HttpClient) {
   }
 
-  Filter(): Observable<any> {
-    return this.http.get(this._jsonURL);
+  Filter(): Observable<User[]> {
+    return Observable.create(observer => {
+      this.http.get(this._jsonURL).subscribe((res: User[]) => {
+        observer.next(res);
+        observer.complete();
+      }, err => {
+        console.log(err.error);
+      });
+    })
   }
 }
