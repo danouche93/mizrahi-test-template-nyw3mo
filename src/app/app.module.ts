@@ -25,7 +25,6 @@ import { MatTableModule } from '@angular/material/table';
     MatListModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule,
     MatTableModule,
     AppRoutingModule,
     HttpClientModule,
@@ -37,5 +36,6 @@ import { MatTableModule } from '@angular/material/table';
   ],
   providers: [UsersService],
   bootstrap: [AppComponent],
+  exports: [MatButtonModule]
 })
 export class AppModule {}
