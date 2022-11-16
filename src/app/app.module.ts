@@ -13,8 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { FiltersComponent } from './components/filters/filters.component';
-import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -24,8 +25,10 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatListModule,
     MatCardModule,
+    MatDialogModule,
     MatInputModule,
     MatTableModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
     HttpClientModule,
   ],
@@ -35,7 +38,6 @@ import { MatTableModule } from '@angular/material/table';
     FiltersComponent,
   ],
   providers: [UsersService],
-  bootstrap: [AppComponent],
-  exports: [MatButtonModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
