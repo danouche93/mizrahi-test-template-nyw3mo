@@ -10,18 +10,23 @@ import { UsersService } from '../../services/users.service';
 export class UsersListComponent implements OnInit {
   users: User[] = [];
   displayedColumns = ['id', 'first_name', 'last_name', 'account_id', 'email'];
+  loading: boolean = false;
 
   constructor(private userService: UsersService) {}
 
   ngOnInit() {
+    this.loading = true;
     this.userService.Get().subscribe((res) => {
       this.users = res;
+      this.loading = false;
     });
   }
 
   filter(event) {
+    this.loading = true;
     this.userService.Filter(event.userModel).subscribe((res) => {
       this.users = res;
+      this.loading = false;
     });
   }
 }

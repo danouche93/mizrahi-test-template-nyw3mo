@@ -3,7 +3,7 @@
     <h2>List of users</h2>
   </mat-toolbar>
   <app-filters (searchEvent)="filter($event)"></app-filters>
-  <mat-spinner mode="indeterminate"></mat-spinner>
+    <mat-spinner *ngIf="loading" mode="indeterminate" [diameter]="30"></mat-spinner>
   <div class="table-container">
     <div *ngIf="users.length == 0">No users found</div>
     <table

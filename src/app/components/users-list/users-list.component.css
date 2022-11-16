@@ -11,3 +11,11 @@ table {
   height: 450px;
   overflow-y: auto;
 }
+
+/deep/ .mat-progress-spinner circle, /deep/ .mat-spinner circle {
+  stroke: rgb(78, 50, 204);
+}
+
+mat-spinner{
+  margin-left: 15px;
+}
