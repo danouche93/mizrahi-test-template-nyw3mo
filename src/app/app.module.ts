@@ -15,6 +15,7 @@ import { UserItemComponent } from './user-item/user-item.component';
 import { MatCardModule } from '@angular/material/card';
 import { FiltersComponent } from './filters/filters.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    MatTableModule,
     AppRoutingModule,
     HttpClientModule,
   ],
