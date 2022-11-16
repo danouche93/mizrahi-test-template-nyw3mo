@@ -7,13 +7,12 @@ import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing';
-import { UsersListComponent } from './users-list/users-list.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
-import { UserItemComponent } from './user-item/user-item.component';
 import { MatCardModule } from '@angular/material/card';
-import { FiltersComponent } from './filters/filters.component';
+import { FiltersComponent } from './components/filters/filters.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 
@@ -34,7 +33,6 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [
     AppComponent,
     UsersListComponent,
-    UserItemComponent,
     FiltersComponent,
   ],
   providers: [UsersService],

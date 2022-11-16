@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../models/user';
-import { UsersService } from '../services/users.service';
+import { User } from '../../models/user';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-users-list',
@@ -10,7 +10,7 @@ import { UsersService } from '../services/users.service';
 export class UsersListComponent implements OnInit {
 
   users: User[] = [];
-  displayedColumns: ["id", "first_name", "last_name", "account_id", "email"]
+  displayedColumns = ["id", "first_name", "last_name", "account_id", "email"]
   
   constructor(private userService: UsersService) { }
 
